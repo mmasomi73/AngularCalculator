@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Test Angular">
+    <meta name="author" content="m.masomi">
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="vendor/assets/css/style.css">
+</head>
+
+<body class="rtl" ng-app="calculatorApp">
+
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>منو</h3>
+            <img src="" alt="">
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>امکانات</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">امکانات پایه</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">ماشین حساب</a></li>
+                    <li><a href="#">جدول</a></li>
+                    <li><a href="#">فرم</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">تماس باما</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li><a href="https://mmasomi.ir" class="download">خروج</a></li>
+            <li><a href="https://mmasomi.ir" class="article">تماس با ما</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="col-lg-6">
+            <div class="card rtl" ng-controller="calculatorController">
+                <div class="card-body" ng-keydown="onKeyDown($event)">
+                    <div class="result-box ltr">
+                        <span class="history">{{ calculator.historyDisplay }}</span>
+                        <span class="result">{{ calculator.currentDisplay }}</span>
+                    </div>
+                    <div class="number-box">
+                        <div class="num-sec">
+
+                            <div ng-click="operationButtonClicked('+')" class="number font-dg">+</div>
+                            <div ng-click="operationButtonClicked('sin')" class="number ltr disabled">Sin()</div>
+                            <div ng-click="numberButtonClicked(9)" class="number font-dg">9</div>
+                            <div ng-click="numberButtonClicked(8)" class="number font-dg">8</div>
+                            <div ng-click="numberButtonClicked(7)" class="number font-dg">7</div>
+
+                            <div ng-click="operationButtonClicked('-')" class="number font-dg">-</div>
+                            <div ng-click="operationButtonClicked('cos')" class="number ltr disabled">Cos()</div>
+                            <div ng-click="numberButtonClicked(6)" class="number font-dg">6</div>
+                            <div ng-click="numberButtonClicked(5)" class="number font-dg">5</div>
+                            <div ng-click="numberButtonClicked(4)" class="number font-dg">4</div>
+
+                            <div ng-click="operationButtonClicked('*')" class="number font-dg">×</div>
+                            <div ng-click="operationButtonClicked('tan')" class="number ltr disabled">Tan()</div>
+                            <div ng-click="numberButtonClicked(3)" class="number font-dg">3</div>
+                            <div ng-click="numberButtonClicked(2)" class="number font-dg">2</div>
+                            <div ng-click="numberButtonClicked(1)" class="number font-dg">1</div>
+
+                            <div ng-click="operationButtonClicked('/')" class="number font-dg">/</div>
+                            <div ng-click="operationButtonClicked('cot')" class="number ltr disabled">Cot()</div>
+                            <div ng-click="numberButtonClicked('.')" class="number">.</div>
+                            <div ng-click="numberButtonClicked(0)" class="number font-dg">0</div>
+                            <div ng-click="resetClicked()" class="number">c</div>
+
+                            <div ng-click="operationButtonClicked('=')" class="number font-dg">=</div>
+                            <div ng-click="operationButtonClicked('m')" class="number ltr disabled">M</div>
+                            <div ng-click="operationButtonClicked('m+')" class="number ltr disabled">M+</div>
+                            <div ng-click="operationButtonClicked('m-')" class="number ltr disabled">M-</div>
+                            <div ng-click="operationButtonClicked('md')" class="number ltr disabled">MD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/angular/angular.min.js"></script>
+<!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+<script src="vendor/assets/js/controllers.js"></script>
+
+</body>
+
+</html>
