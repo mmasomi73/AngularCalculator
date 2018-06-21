@@ -11,7 +11,7 @@ Used Packages:
 * [Bootstrap] - awesome web-based text editor `v4.1.0`  
  * [Bootstrap RTL] - awesome web-based text editor `v4.1.0` 
   
-![enter image description here](https://ibb.co/k9uEkT)
+![enter image description here](https://image.ibb.co/dgNOeo/calc.png)
   
   licence: `MIT`
   [Bootstrap]: <https://getbootstrap.com/>  
